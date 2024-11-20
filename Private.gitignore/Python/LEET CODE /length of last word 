@@ -1,9 +1,0 @@
-phrase = "luffy is still joyboy"
-
-phrase = phrase.split()
-
-print(len(phrase[-1]))
-
-new_phrase = list(phrase)
-
-print(new_phrase[-1])
