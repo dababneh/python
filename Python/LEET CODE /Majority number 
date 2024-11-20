@@ -1,0 +1,9 @@
+nums= [1,2,3,0,0]
+
+s = {}
+for i in nums:
+    s[i] = s.get(i, 0) + 1  # Increment count, initialize to 0 if not present
+majority_key = max(s, key=s.get)  # Find key with the maximum value
+    
+
+print(majority_key)

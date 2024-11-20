@@ -1,0 +1,9 @@
+list1 = [1,2,4,3,5]
+list2 = [1,2,4,3,5]
+
+list3 = list1 + list2
+
+list3.sort(reverse=True)
+
+print(list3)
+

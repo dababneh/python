@@ -1,0 +1,8 @@
+#Apply for jobs Porgram
+
+class Jobs :
+
+    rec_name = input("Enter the recruiter's name: " )
+    pos = input("Enter the position name: " )
+    print("Message generated successfully...\n")
+    print("\n\n\nHi " +rec_name+ ",\nMy name is Jamil. I recently finished my career experience at Apple Park in the internet technologies department (QA). I thought I could share my resume with you as I am interested in the " +pos+ " position.\nHere is a little bit about me. I have been with Apple for more than 3 years and during that time I have managed to get my masters in cyber security. My bachelors is in computer science with a minor in mathematics. I’m fluent in Arabic, English, and I’m currently learning Spanish.\nDuring my career experience, I worked on triaging radars, isolate the issue the originator is having and make sure the radar get delivered to the right component unless a solution can be found at that moment. I also helped in build (Hardware), install and distribute infraPi’s that departments across Apple have been using for testing purposes. In addition, I did daily manual testing (TSTT) of unreleased macOS in order to identify possible failures either from my department’s build or the base build. Some of the applications/features that I tested daily were sign in with iCloud, internet sharing, Airdrop, Calendar, FaceTime, iCloud Photo Library, VPN, AirPlay, WiFi calling and captive network. I will be attaching my resume in this email. I’m looking forward to hearing from you. ( I apologize for contacting you from my personal account, unfortunately I don’t have access to my work email.)\n\n\n")

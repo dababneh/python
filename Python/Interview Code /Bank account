@@ -1,0 +1,31 @@
+class BankAccount:
+    def __init__(self, balance: float):
+        self.balance = balance 
+        
+    
+    def deposit(self, amount: float) -> None:
+        self.amount = amount
+        if self.amount > 0 :
+            self.balance += self.amount
+        
+        
+    
+    def withdraw(self, amount: float) -> bool:
+        self.amount = amount
+        if self.amount >= self.balance:
+            print("Current balance is not enough")
+            return False
+        else: 
+            self.balance -= self.amount
+            return True
+
+        
+    def get_balance(self) -> float:
+        return self.balance
+
+
+account = BankAccount(100)
+account.deposit(100)
+print(account.get_balance())
+account.withdraw(199)
+print(account.get_balance())

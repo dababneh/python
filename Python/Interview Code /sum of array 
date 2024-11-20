@@ -1,0 +1,21 @@
+
+class average:
+    def __init__(self, size:int) -> None:
+        self.size = size 
+        self.array = []
+
+    def movingArrary(self, value:int):
+
+        self.array.append(value)
+        if len(self.array) > self.size:
+            self.array.pop(0)
+
+        return sum(self.array) / len(self.array)
+
+
+
+test = average(4)
+print(test.movingArrary(3))
+print(test.movingArrary(10))
+print(test.movingArrary(3))
+print(test.movingArrary(3))

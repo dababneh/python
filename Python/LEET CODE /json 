@@ -1,0 +1,63 @@
+import json
+
+# Define the Avenger class to represent each Avenger
+class Avenger:
+    def __init__(self, name, rating):
+        self.name = name
+        self.rating = rating
+
+    def __repr__(self):
+        return f"{self.name}: {self.rating}"
+
+# Define the Avengers class to hold a list of Avengers and perform operations
+class Avengers:
+    def __init__(self, avengers_list):
+        # Expecting a list of Avenger objects
+        self.avengers = avengers_list
+
+    # Filter Avengers with a rating greater than 80
+    def filter_by_rating(self, min_rating=80):
+        return [avenger for avenger in self.avengers if avenger.rating > min_rating]
+
+    # Get the lowest rating in the subset
+    def get_lowest_rating(self, avengers_subset):
+        return min(avengers_subset, key=lambda avenger: avenger.rating).rating
+
+    # Get the highest rating in the subset
+    def get_highest_rating(self, avengers_subset):
+        return max(avengers_subset, key=lambda avenger: avenger.rating).rating
+
+    # Get the average rating in the subset
+    def get_average_rating(self, avengers_subset):
+        return sum(avenger.rating for avenger in avengers_subset) / len(avengers_subset)
+
+    # Sort the Avengers by rating
+    def sort_by_rating(self, avengers_subset):
+        return sorted(avengers_subset, key=lambda avenger: avenger.rating)
+
+# Load the JSON data from a file
+with open("/Users/jamildababneh/Desktop/Personal /Python/LEET CODE /avengers.json", "r") as f:
+    data = json.load(f)
+
+# Create a list of Avenger objects from the JSON data
+avenger_list = [Avenger(item['name'], item['rating']) for item in data]
+
+# Instantiate the Avengers class
+avengers = Avengers(avenger_list)
+
+# Step 2: Filter Avengers with a rating greater than 80
+filtered_avengers = avengers.filter_by_rating()
+
+# Step 3: Print the lowest rating
+print("Lowest rating:", avengers.get_lowest_rating(filtered_avengers))
+
+# Step 3: Print the highest rating
+print("Highest rating:", avengers.get_highest_rating(filtered_avengers))
+
+# Step 4: Print the average rating
+print("Average rating:", avengers.get_average_rating(filtered_avengers))
+
+# Step 5: Print the sorted subset by rating
+print("Avengers sorted by rating:")
+for avenger in avengers.sort_by_rating(filtered_avengers):
+    print(avenger)

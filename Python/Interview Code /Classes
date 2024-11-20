@@ -1,0 +1,16 @@
+class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def calculate_area(self):
+        area = int(self.length * self.width)
+        return area
+
+class square(Rectangle):
+    def __init__(self, side):
+        self.side = side
+
+rectangle = Rectangle(5, 10)
+
+print(rectangle.calculate_area())

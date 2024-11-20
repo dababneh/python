@@ -1,0 +1,38 @@
+nums1= [1,2,3,0,0, 0]
+nums2= [2,5, 5]
+m = 3
+n = 3
+
+def merge(nums1, nums2, m, n):
+
+    if not nums1 and not nums2:
+        return 0
+    elif len(nums1) != n+m:
+        return 0
+
+    nums1 = [num for num in nums1 if num > 0]
+    nums2 = [num for num in nums2 if num > 0]
+
+    nums1.extend(nums2)
+    nums1.sort()
+
+    return (nums1)
+
+print(merge(nums1, nums2, 3, 3))
+
+# def merge_arrays(nums1,m, nums2,n):
+
+#     if len(nums1) != m+n:
+#         return 0 
+    
+#     nums1 = [x for x in nums1 if x >0]
+#     nums2 = [x for x in nums2 if x >0]
+    
+#     nums1.extend(nums2)
+#     nums1.sort()
+
+#     return nums1
+    
+    
+# print(merge_arrays(nums1, 3, nums2, 2))
+    
